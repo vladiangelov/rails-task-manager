@@ -4,12 +4,12 @@
   <% @tasks.each do |task| %>
     <p>
       <% if task.completed %>
-        &#9745 <%= link_to task.title, task_path(task) %>
-        <%= link_to "[DEL]", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
-      <% else %>
-        &#9744 <%= link_to task.title, task_path(task) %>
-        <%= link_to "[DEL]", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
-      <% end %>
+          &#9746
+        <% else %>
+          &#9744
+        <% end %>
+        <%= link_to task.title, task_path(task.id) %>
+        <%= link_to "[DEL]", task_path(task.id), method: :delete, data: { confirm: "Are you sure?" } %>
     </p>
   <% end %>
 </ul>
