@@ -1,0 +1,11 @@
+<h1>Individual Task</h1>
+<%= link_to "Edit Task", task_edit_path(@task.id) %>
+<h3><%= @task.title %></h3>
+<p id="task-details"><%= @task.details %></p>
+<% if @task.completed %>
+  <p>&#9745 This task is completed</p>
+<% else %>
+  <p>&#9744 This task is NOT completed</p>
+<% end %>
+
+<%= link_to "Back to all tasks", tasks_path %>
